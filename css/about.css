@@ -1,18 +1,3 @@
-/* Custom overrides for the about page using the generic CSS classes */
-.site-banner {
-    color: #fff;
-    padding: 100px 0 60px;
-    position: relative;
-}
-
-.site-banner .colored {
-    color: var(--accent-color);
-}
-
-.breadcum-items .item a {
-    color: var(--accent-color);
-}
-
 /* EQUIPO SECTION */
 .team-member {
     background: white;

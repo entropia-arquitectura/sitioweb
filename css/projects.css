@@ -24,35 +24,6 @@
   margin: 0 auto;
 }
 
-.breadcrumb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.9rem;
-  color: var(--projects-text);
-  margin-bottom: 2rem;
-}
-
-.breadcrumb a {
-  color: var(--projects-accent);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.breadcrumb a:hover {
-  color: var(--projects-dark);
-}
-
-.breadcrumb .separator {
-  margin: 0 0.8rem;
-  color: #999;
-}
-
-.breadcrumb .current {
-  color: var(--projects-dark);
-  font-weight: 500;
-}
-
 .page-title {
   font-size: 3.5rem;
   font-weight: 300;
