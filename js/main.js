@@ -1,14 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Cargar header
-  fetch("partials/header.html")
+  fetch("/partials/header.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("header-container").innerHTML = data;
       setupHeaderScroll();
       setupActiveMenuItem();
     });
+
   // Cargar footer
-  fetch("partials/footer.html")
+  fetch("/partials/footer.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("footer-container").innerHTML = data;
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function setupHeaderScroll() {
   const header = document.getElementById("header");
   if (!header) return;
-  
+
   function handleScroll() {
     if (window.scrollY > 10) {
       header.classList.add("scrolled");
@@ -26,6 +27,7 @@ function setupHeaderScroll() {
       header.classList.remove("scrolled");
     }
   }
+
   window.addEventListener("scroll", handleScroll);
   handleScroll();
 }
@@ -35,7 +37,7 @@ function setupActiveMenuItem() {
   if (!links.length) return;
 
   const pathToHash = {
-    'home': '#home',
+    '/': '#home',
     'services': '#services',
     'projects': '#projects',
     'competitions': '#competitions',
@@ -48,17 +50,19 @@ function setupActiveMenuItem() {
   }
 
   function getCurrentSectionByScroll() {
+    if (window.scrollY === 0) {
+      return '#home'; // 👈 Activar Inicio si no hay scroll
+    }
+
     const sections = document.querySelectorAll("section[id]");
-    let closestSection = sections[0].id;
-
-    sections.forEach(section => {
+    for (let section of sections) {
       const rect = section.getBoundingClientRect();
-      if (rect.top <= 100 && rect.top + rect.height > 100) {
-        closestSection = section.id;
+      if (rect.top <= 100 && rect.bottom > 100) {
+        return `#${section.id}`;
       }
-    });
+    }
 
-    return `#${closestSection}`;
+    return '#home'; // fallback por si no detecta ninguna
   }
 
   function getTargetHash(currentPath, currentPage) {
@@ -74,10 +78,10 @@ function setupActiveMenuItem() {
 
   function updateActiveLink() {
     const currentPath = window.location.pathname;
-    const currentPage = currentPath.split("/").pop() || "index.html";
+    const currentPage = currentPath.split("/").pop();
     let targetHash = null;
 
-    if (currentPage === "index.html" || currentPage === "" || currentPath === "/") {
+    if (currentPage === "" || currentPath === "/") {
       // Página principal – detectar sección activa por scroll
       targetHash = getCurrentSectionByScroll();
     } else {
@@ -100,4 +104,5 @@ function setupActiveMenuItem() {
   window.addEventListener("hashchange", updateActiveLink);
   window.addEventListener("load", updateActiveLink);
   setTimeout(updateActiveLink, 100);
+  updateActiveLink();
 }

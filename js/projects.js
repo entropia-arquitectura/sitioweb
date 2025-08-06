@@ -95,23 +95,17 @@ document.addEventListener('DOMContentLoaded', function() {
     /**
      * Filtrar proyectos por categoría
      */
-    function filterProjects(filter) {
-        console.log('=== FILTRANDO PROYECTOS ===');
-        console.log('Filtro:', filter);
-        
+    function filterProjects(filter) {        
         // Obtener proyectos que coinciden con el filtro
         const filteredCards = [];
         
         projectCards.forEach(card => {
             const category = card.getAttribute('data-category');
-            console.log('Proyecto categoria:', category, 'Filtro:', filter);
             
             if (filter === 'all' || category === filter) {
                 filteredCards.push(card);
             }
         });
-        
-        console.log('Proyectos filtrados:', filteredCards.length);
         
         // Ocultar todos primero
         projectCards.forEach(card => {
@@ -144,14 +138,11 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function setupLoadMore() {
         if (loadMoreBtn) {
-            console.log('Configurando botón cargar más');
             loadMoreBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 console.log('Clic en cargar más');
                 loadMoreProjects();
             });
-        } else {
-            console.warn('Botón "Cargar más" no encontrado');
         }
     }
     
@@ -159,13 +150,9 @@ document.addEventListener('DOMContentLoaded', function() {
      * Cargar más proyectos
      */
     function loadMoreProjects() {
-        console.log('=== CARGANDO MÁS PROYECTOS ===');
         
         const filteredCards = getFilteredCards(currentFilter);
         const currentlyVisible = getCurrentlyVisibleCount();
-        
-        console.log('Filtrados:', filteredCards.length);
-        console.log('Actualmente visibles:', currentlyVisible);
         
         const toShow = Math.min(projectsPerLoad, filteredCards.length - currentlyVisible);
         let shown = 0;
@@ -184,7 +171,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Actualizar contador de proyectos visibles
         visibleProjects += shown;
-        console.log('Proyectos mostrados:', shown, 'Total visible ahora:', visibleProjects);
         
         // Actualizar botón
         setTimeout(() => {
@@ -225,9 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateProjectsCounter(filter = currentFilter) {
         const filteredCards = getFilteredCards(filter);
         const count = filteredCards.length;
-        
-        console.log('Actualizando contador a:', count, 'para filtro:', filter);
-        
+                
         if (projectsCounter) {
             projectsCounter.textContent = count;
         }
@@ -241,45 +225,18 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const filteredCards = getFilteredCards(filter);
         const visibleCount = getCurrentlyVisibleCount();
-        
-        console.log('Botón cargar más - Visibles:', visibleCount, 'Total:', filteredCards.length);
-        
+                
         if (visibleCount >= filteredCards.length) {
             loadMoreBtn.style.display = 'none';
-            console.log('Ocultando botón cargar más');
         } else {
             loadMoreBtn.style.display = 'inline-block';
-            console.log('Mostrando botón cargar más');
         }
     }
     
-    /**
-     * Debug: Mostrar información de todos los proyectos
-     */
-    function debugProjects() {
-        console.log('=== DEBUG PROYECTOS ===');
-        projectCards.forEach((card, index) => {
-            const category = card.getAttribute('data-category');
-            const display = window.getComputedStyle(card).display;
-            const hasHidden = card.classList.contains('hidden');
-            
-            console.log(`Proyecto ${index}:`, {
-                category,
-                display,
-                hasHidden,
-                element: card
-            });
-        });
-    }
-    
+  
     // Inicializar
     init();
-    
-    // Debug después de la inicialización
-    setTimeout(() => {
-        debugProjects();
-    }, 1000);
-    
+
     // Hacer funciones disponibles globalmente para debug
     window.debugProjects = debugProjects;
     window.resetAllProjects = resetAllProjects;
