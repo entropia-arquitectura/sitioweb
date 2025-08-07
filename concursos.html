@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Concursos | Entropia Arquitectura</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/icomoon/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/css/competitions.css">
+    <link rel="icon" src="/images/favicon-e.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/images/favicon-e.ico" type="image/x-icon" />
+    <link rel="icon" href="/images/favicon-e.ico" type="image/x-icon" />
+
+    <!-- script
+    ================================================== -->
+    <script src="/js/modernizr.js"></script>
+
+	</head>
+
+<body data-page="competitions">
+
+<div id="header-container"></div>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Concursos de Arquitectura</h1>
+                <p class="hero-subtitle">
+                    Descubre nuestra trayectoria en competencias nacionales e internacionales. 
+                    Cada proyecto representa nuestra búsqueda constante de innovación y excelencia en el diseño arquitectónico.
+                </p>
+                <a href="/" class="back-button">
+                    ← Volver al Inicio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">47</span>
+                    <span class="stat-label">Concursos Participados</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">18</span>
+                    <span class="stat-label">Premios Obtenidos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Primeros Lugares</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Países</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter and Projects Section -->
+    <section class="filter-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Proyectos</h2>
+            
+            <ul class="filter-tabs">
+                <li>
+                    <a href="#" class="filter-tab active" data-filter="all">
+                        <span class="filter-icon">🏛️</span>
+                        <span>Todos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="filter-tab" data-filter="houses">
+                        <span class="filter-icon">🏠</span>
+                        <span>Viviendas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="filter-tab" data-filter="buildings">
+                        <span class="filter-icon">🏢</span>
+                        <span>Edificios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="filter-tab" data-filter="hotels">
+                        <span class="filter-icon">🏨</span>
+                        <span>Hoteles</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="filter-tab" data-filter="interior">
+                        <span class="filter-icon">🛋️</span>
+                        <span>Interiores</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="filter-tab" data-filter="urban">
+                        <span class="filter-icon">🌆</span>
+                        <span>Urbano</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Viviendas -->
+                <div class="project-card" data-category="houses">
+                    <div class="project-image">
+                        <img src="/images/concurso1-inicio.jpg" alt="Casa Bioclimática">
+                        <div class="project-overlay" onclick="openLightbox('/images/concurso1-inicio.jpg', 'Casa Unifamiliar Bioclimática - Primer Premio')">
+                            <div class="overlay-icon">🔍</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Vivienda</span>
+                        <h3 class="project-title">Casa Unifamiliar Bioclimática</h3>
+                        <p class="project-award">🏆 Primer Premio</p>
+                        <p class="project-description">
+                            Diseño sustentable que integra tecnologías pasivas para el control climático, 
+                            optimizando el uso de recursos naturales y reduciendo el impacto ambiental.
+                        </p>
+                        <span class="project-year">2024</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="houses">
+                    <div class="project-image">
+                        <img src="/images/tab2.jpg" alt="Vivienda Modular">
+                        <div class="project-overlay" onclick="openLightbox('images/tab2.jpg', 'Vivienda Social Modular - Mención Especial')">
+                            <div class="overlay-icon">🔍</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Vivienda</span>
+                        <h3 class="project-title">Vivienda Social Modular</h3>
+                        <p class="project-award">🏅 Mención Especial</p>
+                        <p class="project-description">
+                            Sistema constructivo modular que permite la adaptabilidad y crecimiento 
+                            progresivo, respondiendo a las necesidades cambiantes de las familias.
+                        </p>
+                        <span class="project-year">2023</span>
+                    </div>
+                </div>
+
+                <!-- Edificios -->
+                <div class="project-card" data-category="buildings">
+                    <div class="project-image">
+                        <img src="/images/tab3.jpg" alt="Torre LEED">
+                        <div class="project-overlay" onclick="openLightbox('images/tab3.jpg', 'Torre de Oficinas LEED - Segundo Premio')">
+                            <div class="overlay-icon">🔍</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Comercial</span>
+                        <h3 class="project-title">Torre de Oficinas LEED</h3>
+                        <p class="project-award">🥈 Segundo Premio</p>
+                        <p class="project-description">
+                            Edificio corporativo de alta eficiencia energética con certificación LEED Gold, 
+                            integrando tecnologías verdes y espacios de trabajo colaborativo.
+                        </p>
+                        <span class="project-year">2024</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="buildings">
+                    <div class="project-image">
+                        <img src="/images/tab4.jpg" alt="Centro Educativo">
+                        <div class="project-overlay" onclick="openLightbox('images/tab4.jpg', 'Centro Educativo Integral - Finalista')">
+                            <div class="overlay-icon">🔍</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Educacional</span>
+                        <h3 class="project-title">Centro Educativo Integral</h3>
+                        <p class="project-award">🎯 Finalista</p>
+                        <p class="project-description">
+                            Complejo educativo que promueve el aprendizaje activo a través de 
+                            espacios flexibles e integración con áreas verdes urbanas.
+                        </p>
+                        <span class="project-year">2023</span>
+                    </div>
+                </div>
+
+                <!-- Hoteles -->
+                <div class="project-card" data-category="hotels">
+                    <div class="project-image">
+                        <img src="/images/concurso2-inicio.jpg" alt="Resort Patagonia">
+                        <div class="project-overlay" onclick="openLightbox('/images/concurso2-inicio.jpg', 'Resort Ecológico Patagonia - Primer Premio')">
+                            <div class="overlay-icon">🔍</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Hospitalidad</span>
+                        <h3 class="project-title">Resort Ecológico Patagonia</h3>
+                        <p class="project-award">🏆 Primer Premio</p>
+                        <p class="project-description">
+                            Complejo turístico que se integra armoniosamente con el paisaje patagónico, 
+                            utilizando materiales locales y técnicas de construcción sustentable.
+                        </p>
+                        <span class="project-year">2024</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="hotels">
+                    <div class="project-image">
+                        <img src="/images/tab2.jpg" alt="Hotel Urbano">
+                        <div class="project-overlay" onclick="openLightbox('images/tab2.jpg', 'Hotel Urbano Contemporáneo - Mención Honorífica')">
+                            <div class="overlay-icon">🔍</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Hospitalidad</span>
+                        <h3 class="project-title">Hotel Urbano Contemporáneo</h3>
+                        <p class="project-award">🏅 Mención Honorífica</p>
+                        <p class="project-description">
+                            Hotel boutique en el corazón de la ciudad que redefine la experiencia 
+                            urbana a través de espacios comunitarios innovadores.
+                        </p>
+                        <span class="project-year">2023</span>
+                    </div>
+                </div>
+
+                <!-- Interiores -->
+                <div class="project-card" data-category="interior">
+                    <div class="project-image">
+                        <img src="/images/tab3.jpg" alt="Oficinas Corporativas">
+                        <div class="project-overlay" onclick="openLightbox('images/tab3.jpg', 'Oficinas Corporativas Sustentables - Tercer Premio')">
+                            <div class="overlay-icon">🔍</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Interiorismo</span>
+                        <h3 class="project-title">Oficinas Corporativas Sustentables</h3>
+                        <p class="project-award">🥉 Tercer Premio</p>
+                        <p class="project-description">
+                            Diseño de interiores que promueve el bienestar laboral y la productividad 
+                            a través de espacios adaptativos y materiales ecológicos.
+                        </p>
+                        <span class="project-year">2024</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="interior">
+                    <div class="project-image">
+                        <img src="/images/tab4.jpg" alt="Restaurante Gourmet">
+                        <div class="project-overlay" onclick="openLightbox('images/tab4.jpg', 'Restaurante Gourmet - Finalista')">
+                            <div class="overlay-icon">🔍</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Gastronomía</span>
+                        <h3 class="project-title">Restaurante Gourmet</h3>
+                        <p class="project-award">🎯 Finalista</p>
+                        <p class="project-description">
+                            Espacio gastronómico que combina elementos industriales con toques 
+                            cálidos, creando una atmósfera única para la experiencia culinaria.
+                        </p>
+                        <span class="project-year">2023</span>
+                    </div>
+                </div>
+
+                <!-- Urbano -->
+                <div class="project-card" data-category="urban">
+                    <div class="project-image">
+                        <img src="/images/concurso3-inicio.jpg" alt="Puerto Madero">
+                        <div class="project-overlay" onclick="openLightbox('/images/concurso3-inicio.jpg', 'Regeneración Urbana Puerto Madero - Segundo Premio')">
+                            <div class="overlay-icon">🔍</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Urbano</span>
+                        <h3 class="project-title">Regeneración Urbana Puerto Madero</h3>
+                        <p class="project-award">🥈 Segundo Premio</p>
+                        <p class="project-description">
+                            Propuesta de revitalización urbana que conecta el río con la ciudad, 
+                            creando nuevos espacios públicos y corredores verdes.
+                        </p>
+                        <span class="project-year">2024</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="urban">
+                    <div class="project-image">
+                        <img src="/images/tab2.jpg" alt="Parque Lineal">
+                        <div class="project-overlay" onclick="openLightbox('images/tab2.jpg', 'Parque Lineal Sustentable - Mención Especial')">
+                            <div class="overlay-icon">🔍</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Paisaje</span>
+                        <h3 class="project-title">Parque Lineal Sustentable</h3>
+                        <p class="project-award">🏅 Mención Especial</p>
+                        <p class="project-description">
+                            Intervención paisajística que transforma un corredor urbano en 
+                            un pulmón verde multifuncional para la comunidad.
+                        </p>
+                        <span class="project-year">2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">×</button>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+            <div class="lightbox-info" id="lightboxInfo"></div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/ui-easing.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="js/contest.js"></script>
+</body>
+</html>

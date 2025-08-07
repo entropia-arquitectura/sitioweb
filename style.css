@@ -760,9 +760,6 @@ html {
 .content-light {
   color: #fff;
 }
-.content-light a:hover {
-
-}
 
 /*----- Grid Layout
 --------------------------------------------------------------*/
@@ -793,40 +790,62 @@ html {
 
 /*----- Main Slider
 --------------------------------------------------------------*/
-#intro {
+#home {
     position: relative;
 }
+
+.main-slider {
+    position: relative;
+}
+
 .main-slider .slider-item {
     position: relative;
+    width: 100%;
+    height: 70vh; /* Altura fija para todas las imágenes */
+    min-height: 600px; /* Altura mínima */
+    overflow: hidden;
 }
+
+.main-slider .slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene proporciones y rellena el contenedor */
+    object-position: center; /* Centra la imagen */
+}
+
 .main-slider .banner-content {
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 50%;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 300px;
+    z-index: 2;
 }
+
 .banner-content h2.banner-title {
     font-family: "Montserrat", Georgia, serif;
     font-size: 5.5em;
     font-weight: 900;
     color: #fff;
     text-transform: uppercase;
-
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para mejor legibilidad */
 }
+
 .txt-fx .letter {
     opacity: 0;
 }
 
-#intro .button-container {
-    display: flex;
+/* Botones posicionados en la esquina inferior derecha */
+.button-container {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 0;
+    z-index: 3;
 }
+
 .button-container button.slick-arrow {
     font-size: 1.6em;
     line-height: 0;
@@ -834,69 +853,141 @@ html {
     color: #fff;
     background: var(--dark-color);
     padding: 20px;
-    margin: 0;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
 .button-container button.slick-arrow:hover,
 .button-container button.slick-arrow:focus {
     background: var(--accent-color);
     outline: none;
 }
 
-@media only screen and (max-width: 1600px) {
-  .banner-content .btn-wrap {
-      margin: 30px 0;
-  }
-  .main-slider .banner-content {
-      margin-top: 200px;
-  }
+/* Overlay para mejorar el contraste del texto */
+.main-slider .slider-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Overlay semitransparente */
+    z-index: 1;
 }
 
-@media only screen and (max-width: 1399px) {
-  .banner-content h2.banner-title {
-      font-size: 4.5em;
-  }
+.main-slider .banner-content,
+.button-container {
+    z-index: 2; /* Asegura que el contenido esté por encima del overlay */
 }
 
-@media only screen and (max-width: 1199px) {
-  .main-slider .banner-content {
-      margin-top: 150px;
-  }
-  .banner-content h2.banner-title {
-      font-size: 4em;
-  }
+/* Media Queries Responsivas - Mejoradas */
+@media only screen and (max-width: 1400px) {
+    .banner-content h2.banner-title {
+        font-size: 4.5em;
+    }
+    .banner-content .btn-wrap {
+        margin: 25px 0;
+    }
 }
 
-@media only screen and (max-width: 999px) {
-  .main-slider .banner-content {
-      margin-top: 100px;
-  }
-  .banner-content h2.banner-title {
-      font-size: 3.5em;
-  }
+@media only screen and (max-width: 1200px) {
+    .banner-content h2.banner-title {
+        font-size: 4em;
+    }
+    .main-slider .slider-item {
+        height: 60vh;
+        min-height: 500px;
+    }
+    .main-slider .banner-content {
+        width: 60%;
+    }
 }
 
-@media only screen and (max-width: 876px) {
-  .banner-content h2.banner-title {
-      font-size: 3em;
-  }
+@media only screen and (max-width: 992px) {
+    .banner-content h2.banner-title {
+        font-size: 3.2em;
+    }
+    .main-slider .slider-item {
+        height: 55vh;
+        min-height: 450px;
+    }
+    .main-slider .banner-content {
+        width: 75%;
+    }
 }
 
-@media only screen and (max-width: 753px) {
-  .banner-content h2.banner-title {
-      font-size: 2em;
-  }
-  #intro .button-container {
-      bottom: -65px;
-  }
+@media only screen and (max-width: 768px) {
+    .banner-content h2.banner-title {
+        font-size: 2.5em;
+        line-height: 1.1;
+    }
+    .main-slider .slider-item {
+        height: 50vh;
+        min-height: 400px;
+    }
+    .main-slider .banner-content {
+        width: 85%;
+    }
+    .button-container {
+        bottom: 15px;
+        right: 15px;
+    }
+    .button-container button.slick-arrow {
+        padding: 16px;
+        font-size: 1.3em;
+    }
 }
 
-@media only screen and (max-width: 580px) {
-  .main-slider .banner-content {
-      margin-top: 40px;
-  }
-  .main-slider .banner-content {
-      width: 80%;
-  }
+@media only screen and (max-width: 576px) {
+    .banner-content h2.banner-title {
+        font-size: 2em;
+        line-height: 1.1;
+    }
+    .main-slider .slider-item {
+        height: 45vh;
+        min-height: 350px;
+    }
+    .main-slider .banner-content {
+        width: 90%;
+    }
+    .button-container {
+        bottom: 12px;
+        right: 12px;
+    }
+    .button-container button.slick-arrow {
+        padding: 14px;
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .banner-content h2.banner-title {
+        font-size: 1.8em;
+    }
+    .main-slider .slider-item {
+        height: 40vh;
+        min-height: 320px;
+    }
+    .button-container {
+        bottom: 10px;
+        right: 10px;
+    }
+    .button-container button.slick-arrow {
+        padding: 12px;
+        font-size: 1em;
+    }
+}
+
+/* Para dispositivos muy pequeños */
+@media only screen and (max-width: 375px) {
+    .banner-content h2.banner-title {
+        font-size: 1.6em;
+    }
+    .main-slider .slider-item {
+        min-height: 300px;
+    }
 }
 
 /*----- About us Section

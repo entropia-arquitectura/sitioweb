@@ -2,7 +2,7 @@
 
 🎓 Estudio de arquitectura fundado por Natalia Videla y Rosina Romanazzi, arquitectas egresadas de la FAU-UNLP.
 
-🌍 Con sede en La Plata y Daireaux, trabajamos en proyectos con fuerte impronta conceptual, abordando todas las etapas del proceso arquitectónico.
+🌍 Trabajamos en proyectos con fuerte impronta conceptual, abordando todas las etapas del proceso arquitectónico.
 
 ## 🌱 Servicios
 

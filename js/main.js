@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("header-container").innerHTML = data;
             setupHeaderScroll();
             setupActiveMenuItem();
+            setupMobileMenu();
         });
     // Cargar footer
     fetch("/partials/footer.html")
@@ -123,4 +124,65 @@ function setupActiveMenuItem() {
     window.addEventListener("load", updateActiveLink);
 
     setTimeout(updateActiveLink, 100);
+}
+
+function setupMobileMenu() {
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const body = document.body;
+    
+    if (!mobileMenuToggle || !mobileMenu) return;
+    
+    // Toggle del menú móvil
+    mobileMenuToggle.addEventListener('click', function(e) {
+        e.stopPropagation(); // Evitar que se propague el evento
+        
+        mobileMenuToggle.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        
+        // Prevenir scroll del body cuando el menú está abierto
+        if (mobileMenu.classList.contains('active')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = '';
+        }
+    });
+    
+    // Cerrar menú al hacer clic en un enlace
+    const mobileMenuLinks = mobileMenu.querySelectorAll('.nav-link');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            closeMobileMenu();
+        });
+    });
+    
+    // Cerrar menú al hacer clic fuera de él
+    document.addEventListener('click', function(event) {
+        if (mobileMenu.classList.contains('active') && 
+            !mobileMenu.contains(event.target) && 
+            !mobileMenuToggle.contains(event.target)) {
+            closeMobileMenu();
+        }
+    });
+    
+    // Cerrar menú al presionar Escape
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
+    
+    // Cerrar menú al cambiar el tamaño de ventana (si pasa a desktop)
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 991 && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
+    
+    // Función helper para cerrar el menú
+    function closeMobileMenu() {
+        mobileMenuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        body.style.overflow = '';
+    }
 }
