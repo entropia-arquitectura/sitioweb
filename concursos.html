@@ -1,337 +1,325 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="no-js" lang="es">
 <head>
-	<title>Concursos | Entropia Arquitectura</title>
-	<meta charset="utf-8">
+    <!-- CAMBIAR: título que aparece en la pestaña del navegador -->
+    <title>Concursos | Entropia Arquitectura</title> meta charset="utf-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="author" content="">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
 
+    <!-- CAMBIAR: palabras clave para buscadores -->
+    <meta name="keywords" content="arquitectura, proyectos, concursos, diseño">
+
+    <!-- CAMBIAR: descripción para buscadores -->
+    <meta name="description" content="Descubre nuestros proyectos de arquitectura - viviendas, espacios comerciales y proyectos institucionales">
+
+    <!-- No tocar estas líneas -->
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="/icomoon/style.css">
     <link rel="stylesheet" type="text/css" href="/css/vendor.css">
     <link rel="stylesheet" type="text/css" href="/style.css">
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="/css/competitions.css">
+    <link rel="stylesheet" type="text/css" href="/css/projects.css">
     <link rel="icon" src="/images/favicon-e.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="/images/favicon-e.ico" type="image/x-icon" />
     <link rel="icon" href="/images/favicon-e.ico" type="image/x-icon" />
 
-    <!-- script
-    ================================================== -->
+    <!-- Script moderno, no tocar -->
     <script src="/js/modernizr.js"></script>
+</head>
 
-	</head>
+<body data-page="Concursos">
 
-<body data-page="competitions">
-
-<div id="header-container"></div>
+<div id="header-container"></div> 
 
 <main>
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Encabezado de la página -->
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Concursos de Arquitectura</h1>
-                <p class="hero-subtitle">
-                    Descubre nuestra trayectoria en competencias nacionales e internacionales. 
-                    Cada proyecto representa nuestra búsqueda constante de innovación y excelencia en el diseño arquitectónico.
-                </p>
-                <a href="/" class="back-button">
-                    ← Volver al Inicio
-                </a>
+            <div class="header-content">
+                <!-- CAMBIAR: título principal de la página -->
+                <h1 class="page-title">Nuestros Concursos</h1>
+                <!-- CAMBIAR: subtítulo -->
+                <p class="page-subtitle">Descubre nuestra participación en concursos nacionales de arquitectra que reflejan nuestro compromiso con la sustentabilidad</p>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
+    <!-- Sección principal de proyectos -->
+    <section class="projects-section">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">2</span>
-                    <span class="stat-label">Concursos Participados</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">1</span>
-                    <span class="stat-label">Premios Obtenidos</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">0</span>
-                    <span class="stat-label">Primeros Lugares</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">1</span>
-                    <span class="stat-label">Países</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Filter and Projects Section -->
-    <section class="filter-section">
-        <div class="container">
-            <h2 class="section-title">Nuestros Proyectos</h2>
             
-            <ul class="filter-tabs">
-                <li>
-                    <a href="#" class="filter-tab active" data-filter="all">
-                        <span class="filter-icon">🏛️</span>
-                        <span>Todos</span>
+            <!-- Filtros de categorías -->
+            <div class="projects-filters">
+                <div class="filter-buttons">
+                    <!-- Botón de todos los proyectos, no tocar -->
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+
+                    <!-- CAMBIAR: nombre de las categorías según los tipos de proyecto que tengan -->
+                    <!-- IMPORTANTE: el valor de data-filter debe coincidir con los data-category 
+                        de cada proyecto para que funcione el filtro
+                    -->
+
+
+                    <!-- CAMBIAR: data-filter si se quiere otra categoría -->
+                    <button class="filter-btn" data-filter="residencial">Residencial</button>
+                    <!-- CAMBIAR: data-filter si se quiere otra categoría -->
+                    <button class="filter-btn" data-filter="comercial">Comercial</button>
+                    <!-- CAMBIAR: data-filter si se quiere otra categoría -->
+                    <button class="filter-btn" data-filter="institucional">Institucional</button>
+                    <!-- CAMBIAR: data-filter si se quiere otra categoría -->
+                    <button class="filter-btn" data-filter="interiorismo">Interiorismo</button>
+                </div>
+                <div class="projects-count">
+                    <span id="projects-counter">0</span> proyectos
+                </div>
+            </div>
+
+            <!-- Galería de proyectos -->
+            <div class="projects-grid">
+                <!-- CAMBIAR: Para agregar más proyectos, 
+                 copiar otro bloque <article class="project-card"> como los anteriores 
+                 y pegarlo debajo 
+                -->
+
+                <!-- Tarjeta Proyecto Casa AD -->
+                
+                <!-- CAMBIAR: categoria, deberiá coincidir con algún data-filter de los de arriba -->
+                <article class="project-card" data-category="residencial">
+                    <!-- CAMBIAR: link a la página del proyecto, sería dentro de la carpeta projects
+                        el archivo html del proyecto 
+                    -->
+                    <a href="/projects/CASA_AD.html" class="project-link">
+                        <div class="project-image">
+                            <!-- CAMBIAR: imagen del proyecto y alt es el nombre de la imagen -->
+                            <img src="/images/projects/Casa_AD_IMAGENES/01_Frente_Casa_AD_SIN_NIEVE.png" alt="Casa AD">
+                            <div class="project-overlay">
+                                <!-- CAMBIAR: categoría, debería coincidir con el data-category de la tarjeta -->
+                                <div class="project-category">Residencial</div>
+                                <!-- CAMBIAR: título -->
+                                <h3 class="project-title">Casa AD</h3>
+                                <!-- CAMBIAR: lugar -->
+                                <p class="project-location">Epuyén, Argentina</p>
+                                <span class="view-project">Ver Proyecto →</span>
+                            </div>
+                        </div>
+                        <!-- INFORMACIÓN DEL PROYECTO que se ve en la parte de la tarjeta -->
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <!-- CAMBIAR: año -->
+                                <span class="project-year">2024</span>
+                                <!-- CAMBIAR: estado -->
+                                <span class="project-status">Anteproyecto</span>
+                            </div>
+                            <!-- CAMBIAR: nombre del proyecto -->
+                            <h3 class="project-name">Casa AD</h3>
+                            <!-- CAMBIAR: breve descripción del proyecto -->
+                            <p class="project-description">Vivienda unifamiliar integrada al paisaje natural de montaña</p>
+                        </div>
                     </a>
-                </li>
-                <li>
-                    <a href="#" class="filter-tab" data-filter="houses">
-                        <span class="filter-icon">🏠</span>
-                        <span>Viviendas</span>
+                </article>
+
+                
+
+                <!-- Tarjeta Proyecto Cocina RR -->
+                <article class="project-card" data-category="interiorismo">
+                    <a href="/projects/Cocina_RR.html" class="project-link">
+                        <div class="project-image">
+                            <img src="/images/projects/Cocina_RR_IMAGENES/01_Cocina_RR.png" alt="Cocina RR">
+                            <div class="project-overlay">
+                                <div class="project-category">Interiorismo</div>
+                                <h3 class="project-title">Cocina RR</h3>
+                                <p class="project-location">Daireaux, Argentina</p>
+                                <span class="view-project">Ver Proyecto →</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-year">2023</span>
+                                <span class="project-status">Construido</span>
+                            </div>
+                            <h3 class="project-name">Cocina RR</h3>
+                            <p class="project-description">Transformación integral de una cocina compacta de 6 m², priorizando la funcionalidad, el diseño contemporáneo y el máximo aprovechamiento del espacio.</p>
+                        </div>
                     </a>
-                </li>
-                <li>
-                    <a href="#" class="filter-tab" data-filter="buildings">
-                        <span class="filter-icon">🏢</span>
-                        <span>Edificios</span>
+                </article>
+
+                 <!-- CAMBIAR: categoria, deberiá coincidir con algún data-filter de los de arriba -->
+                <article class="project-card" data-category="residencial">
+                    <!-- CAMBIAR: link a la página del proyecto, sería dentro de la carpeta projects
+                        el archivo html del proyecto 
+                    -->
+                    <a href="/projects/CASA_MM.html" class="project-link">
+                        <div class="project-image">
+                            <!-- CAMBIAR: imagen del proyecto y alt es el nombre de la imagen -->
+                            <img src="/images/projects/Casa_MM_IMAGENES/00_Fachada_Exterior_CasaMM.jpg" alt="Casa MM">
+                            <div class="project-overlay">
+                                <!-- CAMBIAR: categoría, debería coincidir con el data-category de la tarjeta -->
+                                <div class="project-category">Residencial</div>
+                                <!-- CAMBIAR: título -->
+                                <h3 class="project-title">Casa MM</h3>
+                                <!-- CAMBIAR: lugar -->
+                                <p class="project-location">La Plata, Argentina</p>
+                                <span class="view-project">Ver Proyecto →</span>
+                            </div>
+                        </div>
+                        <!-- INFORMACIÓN DEL PROYECTO que se ve en la parte de la tarjeta -->
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <!-- CAMBIAR: año -->
+                                <span class="project-year">2022</span>
+                                <!-- CAMBIAR: estado -->
+                                <span class="project-status">Anteproyecto</span>
+                            </div>
+                            <!-- CAMBIAR: nombre del proyecto -->
+                            <h3 class="project-name">Casa MM</h3>
+                            <!-- CAMBIAR: breve descripción del proyecto -->
+                            <p class="project-description">Vivienda unifamiliar que articula espacios interiores con el entorno natural, priorizando luz, privacidad y materialidad cálida</p>
+                        </div>
                     </a>
-                </li>
-                <li>
-                    <a href="#" class="filter-tab" data-filter="hotels">
-                        <span class="filter-icon">🏨</span>
-                        <span>Hoteles</span>
+                </article>
+
+
+                  <!-- Tarjeta Proyecto APAdeA -->
+                
+                <!-- CAMBIAR: categoria, deberiá coincidir con algún data-filter de los de arriba -->
+                <article class="project-card" data-category="institucional">
+                    <a href="/projects/Proyecto_APAdeA.html" class="project-link">
+                        <div class="project-image">
+                            <!-- CAMBIAR: imagen del proyecto y alt es el nombre de la imagen -->
+                            <img src="/images/projects/APAdeA_IMAGENES/01_Fachadadelejos_Apadea.png" alt="Proyecto APAdeA">
+                            <div class="project-overlay">
+                                <!-- CAMBIAR: categoría, debería coincidir con el data-category de la tarjeta -->
+                                <div class="project-category">Institucional</div>
+                                <!-- CAMBIAR: título -->
+                                <h3 class="project-title">Proyecto APAdeA</h3>
+                                <!-- CAMBIAR: lugar -->
+                                <p class="project-location">La PLata, Argentina</p>
+                                <span class="view-project">Ver Proyecto →</span>
+                            </div>
+                        </div>
+                        <!-- INFORMACIÓN DEL PROYECTO que se ve en la parte de la tarjeta -->
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <!-- CAMBIAR: año -->
+                                <span class="project-year">2021</span>
+                                <!-- CAMBIAR: estado -->
+                                <span class="project-status">Anteproyecto</span>
+                            </div>
+                            <!-- CAMBIAR: nombre del proyecto -->
+                            <h3 class="project-name">Proyecto APAdeA</h3>
+                            <!-- CAMBIAR: breve descripción del proyecto -->
+                            <p class="project-description">Centro de día y hogar que equilibra intimidad y comunidad, integrándose al bosque con arquitectura sensible</p>
+                        </div>
                     </a>
-                </li>
-                <li>
-                    <a href="#" class="filter-tab" data-filter="interior">
-                        <span class="filter-icon">🛋️</span>
-                        <span>Interiores</span>
+                </article>
+
+                 <!-- Tarjeta Proyecto APAdeA -->
+                
+                <!-- CAMBIAR: categoria, deberiá coincidir con algún data-filter de los de arriba -->
+                <article class="project-card" data-category="Residencial">
+                    <a href="/projects/Proyecto_BO.html" class="project-link">
+                        <div class="project-image">
+                            <!-- CAMBIAR: imagen del proyecto y alt es el nombre de la imagen -->
+                            <img src="/images/projects/Proyecto_BB_IMAGENES/ProyectoBBEstar.png" alt="Proyecto BO">
+                            <div class="project-overlay">
+                                <!-- CAMBIAR: categoría, debería coincidir con el data-category de la tarjeta -->
+                                <div class="project-category">Residencial</div>
+                                <!-- CAMBIAR: título -->
+                                <h3 class="project-title">Proyecto BO</h3>
+                                <!-- CAMBIAR: lugar -->
+                                <p class="project-location">Bonifacio, Argentina</p>
+                                <span class="view-project">Ver Proyecto →</span>
+                            </div>
+                        </div>
+                        <!-- INFORMACIÓN DEL PROYECTO que se ve en la parte de la tarjeta -->
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <!-- CAMBIAR: año -->
+                                <span class="project-year">2022</span>
+                                <!-- CAMBIAR: estado -->
+                                <span class="project-status">Anteproyecto</span>
+                            </div>
+                            <!-- CAMBIAR: nombre del proyecto -->
+                            <h3 class="project-name">Proyecto BO</h3>
+                            <!-- CAMBIAR: breve descripción del proyecto -->
+                            <p class="project-description">Conjunto de viviendas para alquiler diseñadas para integrarse con vivienda existente</p>
+                        </div>
                     </a>
-                </li>
-                <li>
-                    <a href="#" class="filter-tab" data-filter="urban">
-                        <span class="filter-icon">🌆</span>
-                        <span>Urbano</span>
+                </article>
+                 <!-- Tarjeta Proyecto AA -->
+                
+                <!-- CAMBIAR: categoria, deberiá coincidir con algún data-filter de los de arriba -->
+                <article class="project-card" data-category="residencial">
+                    <!-- CAMBIAR: link a la página del proyecto, sería dentro de la carpeta projects
+                        el archivo html del proyecto 
+                    -->
+                    <a href="/projects/Proyecto_AA.html" class="project-link">
+                        <div class="project-image">                            
+                            <img src="/images/projects/CasaAA_IMAGENES/08_CasaAA.jpg" alt="Proyecto AA">
+                            <div class="project-overlay">                              
+                                <div class="project-category">Residencial</div>                                
+                                <h3 class="project-title">Proyecto AA</h3>                                
+                                <p class="project-location">City bell, Argentina</p>
+                                <span class="view-project">Ver Proyecto →</span>
+                            </div>
+                        </div>
+                        <!-- INFORMACIÓN DEL PROYECTO que se ve en la parte de la tarjeta -->
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <!-- CAMBIAR: año -->
+                                <span class="project-year">2021</span>
+                                <!-- CAMBIAR: estado -->
+                                <span class="project-status">Anteproyecto</span>
+                            </div>
+                            <!-- CAMBIAR: nombre del proyecto -->
+                            <h3 class="project-name">Proyecto AA</h3>
+                            <!-- CAMBIAR: breve descripción del proyecto -->
+                            <p class="project-description">Reforma funcional de vivienda mínima.</p>
+                        </div>
                     </a>
-                </li>
-            </ul>
+                </article>
 
-            <div class="projects-grid" id="projectsGrid">
-                <!-- Viviendas -->
-                <div class="project-card" data-category="houses">
-                    <div class="project-image">
-                        <img src="/images/concurso1-inicio.jpg" alt="Casa Bioclimática">
-                        <div class="project-overlay" onclick="openLightbox('/images/concurso1-inicio.jpg', 'Casa Unifamiliar Bioclimática - Primer Premio')">
-                            <div class="overlay-icon">🔍</div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Vivienda</span>
-                        <h3 class="project-title">Casa Unifamiliar Bioclimática</h3>
-                        <p class="project-award">🏆 Primer Premio</p>
-                        <p class="project-description">
-                            Diseño sustentable que integra tecnologías pasivas para el control climático, 
-                            optimizando el uso de recursos naturales y reduciendo el impacto ambiental.
-                        </p>
-                        <span class="project-year">2024</span>
-                    </div>
-                </div>
+            </div>
 
-                <div class="project-card" data-category="houses">
-                    <div class="project-image">
-                        <img src="/images/tab2.jpg" alt="Vivienda Modular">
-                        <div class="project-overlay" onclick="openLightbox('images/tab2.jpg', 'Vivienda Social Modular - Mención Especial')">
-                            <div class="overlay-icon">🔍</div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Vivienda</span>
-                        <h3 class="project-title">Vivienda Social Modular</h3>
-                        <p class="project-award">🏅 Mención Especial</p>
-                        <p class="project-description">
-                            Sistema constructivo modular que permite la adaptabilidad y crecimiento 
-                            progresivo, respondiendo a las necesidades cambiantes de las familias.
-                        </p>
-                        <span class="project-year">2023</span>
-                    </div>
-                </div>
+            
 
-                <!-- Edificios -->
-                <div class="project-card" data-category="buildings">
-                    <div class="project-image">
-                        <img src="/images/tab3.jpg" alt="Torre LEED">
-                        <div class="project-overlay" onclick="openLightbox('images/tab3.jpg', 'Torre de Oficinas LEED - Segundo Premio')">
-                            <div class="overlay-icon">🔍</div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Comercial</span>
-                        <h3 class="project-title">Torre de Oficinas LEED</h3>
-                        <p class="project-award">🥈 Segundo Premio</p>
-                        <p class="project-description">
-                            Edificio corporativo de alta eficiencia energética con certificación LEED Gold, 
-                            integrando tecnologías verdes y espacios de trabajo colaborativo.
-                        </p>
-                        <span class="project-year">2024</span>
-                    </div>
-                </div>
+            <!-- Botón para cargar más -->
+            <div class="load-more-section">
+                <button class="btn btn-xlarge btn-accent btn-rounded load-more-btn">
+                    Cargar más proyectos
+                </button>
+            </div>
 
-                <div class="project-card" data-category="buildings">
-                    <div class="project-image">
-                        <img src="/images/tab4.jpg" alt="Centro Educativo">
-                        <div class="project-overlay" onclick="openLightbox('images/tab4.jpg', 'Centro Educativo Integral - Finalista')">
-                            <div class="overlay-icon">🔍</div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Educacional</span>
-                        <h3 class="project-title">Centro Educativo Integral</h3>
-                        <p class="project-award">🎯 Finalista</p>
-                        <p class="project-description">
-                            Complejo educativo que promueve el aprendizaje activo a través de 
-                            espacios flexibles e integración con áreas verdes urbanas.
-                        </p>
-                        <span class="project-year">2023</span>
-                    </div>
-                </div>
+        </div>
+    </section>
 
-                <!-- Hoteles -->
-                <div class="project-card" data-category="hotels">
-                    <div class="project-image">
-                        <img src="/images/concurso2-inicio.jpg" alt="Resort Patagonia">
-                        <div class="project-overlay" onclick="openLightbox('/images/concurso2-inicio.jpg', 'Resort Ecológico Patagonia - Primer Premio')">
-                            <div class="overlay-icon">🔍</div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Hospitalidad</span>
-                        <h3 class="project-title">Resort Ecológico Patagonia</h3>
-                        <p class="project-award">🏆 Primer Premio</p>
-                        <p class="project-description">
-                            Complejo turístico que se integra armoniosamente con el paisaje patagónico, 
-                            utilizando materiales locales y técnicas de construcción sustentable.
-                        </p>
-                        <span class="project-year">2024</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="hotels">
-                    <div class="project-image">
-                        <img src="/images/tab2.jpg" alt="Hotel Urbano">
-                        <div class="project-overlay" onclick="openLightbox('images/tab2.jpg', 'Hotel Urbano Contemporáneo - Mención Honorífica')">
-                            <div class="overlay-icon">🔍</div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Hospitalidad</span>
-                        <h3 class="project-title">Hotel Urbano Contemporáneo</h3>
-                        <p class="project-award">🏅 Mención Honorífica</p>
-                        <p class="project-description">
-                            Hotel boutique en el corazón de la ciudad que redefine la experiencia 
-                            urbana a través de espacios comunitarios innovadores.
-                        </p>
-                        <span class="project-year">2023</span>
-                    </div>
-                </div>
-
-                <!-- Interiores -->
-                <div class="project-card" data-category="interior">
-                    <div class="project-image">
-                        <img src="/images/tab3.jpg" alt="Oficinas Corporativas">
-                        <div class="project-overlay" onclick="openLightbox('images/tab3.jpg', 'Oficinas Corporativas Sustentables - Tercer Premio')">
-                            <div class="overlay-icon">🔍</div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Interiorismo</span>
-                        <h3 class="project-title">Oficinas Corporativas Sustentables</h3>
-                        <p class="project-award">🥉 Tercer Premio</p>
-                        <p class="project-description">
-                            Diseño de interiores que promueve el bienestar laboral y la productividad 
-                            a través de espacios adaptativos y materiales ecológicos.
-                        </p>
-                        <span class="project-year">2024</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="interior">
-                    <div class="project-image">
-                        <img src="/images/tab4.jpg" alt="Restaurante Gourmet">
-                        <div class="project-overlay" onclick="openLightbox('images/tab4.jpg', 'Restaurante Gourmet - Finalista')">
-                            <div class="overlay-icon">🔍</div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Gastronomía</span>
-                        <h3 class="project-title">Restaurante Gourmet</h3>
-                        <p class="project-award">🎯 Finalista</p>
-                        <p class="project-description">
-                            Espacio gastronómico que combina elementos industriales con toques 
-                            cálidos, creando una atmósfera única para la experiencia culinaria.
-                        </p>
-                        <span class="project-year">2023</span>
-                    </div>
-                </div>
-
-                <!-- Urbano -->
-                <div class="project-card" data-category="urban">
-                    <div class="project-image">
-                        <img src="/images/concurso3-inicio.jpg" alt="Puerto Madero">
-                        <div class="project-overlay" onclick="openLightbox('/images/concurso3-inicio.jpg', 'Regeneración Urbana Puerto Madero - Segundo Premio')">
-                            <div class="overlay-icon">🔍</div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Urbano</span>
-                        <h3 class="project-title">Regeneración Urbana Puerto Madero</h3>
-                        <p class="project-award">🥈 Segundo Premio</p>
-                        <p class="project-description">
-                            Propuesta de revitalización urbana que conecta el río con la ciudad, 
-                            creando nuevos espacios públicos y corredores verdes.
-                        </p>
-                        <span class="project-year">2024</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="urban">
-                    <div class="project-image">
-                        <img src="/images/tab2.jpg" alt="Parque Lineal">
-                        <div class="project-overlay" onclick="openLightbox('images/tab2.jpg', 'Parque Lineal Sustentable - Mención Especial')">
-                            <div class="overlay-icon">🔍</div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Paisaje</span>
-                        <h3 class="project-title">Parque Lineal Sustentable</h3>
-                        <p class="project-award">🏅 Mención Especial</p>
-                        <p class="project-description">
-                            Intervención paisajística que transforma un corredor urbano en 
-                            un pulmón verde multifuncional para la comunidad.
-                        </p>
-                        <span class="project-year">2023</span>
-                    </div>
-                </div>
+    <!-- Llamado a la acción de contacto -->
+    <section class="projects-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Tienes un proyecto en mente?</h2>
+                <p>Conversemos sobre cómo podemos hacer realidad tu visión arquitectónica</p>
+                <a href="/#contact" class="btn btn-xlarge btn-light btn-rounded">Contactanos</a>
             </div>
         </div>
     </section>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <div class="lightbox-content">
-            <button class="lightbox-close" onclick="closeLightbox()">×</button>
-            <img class="lightbox-image" id="lightboxImage" src="" alt="">
-            <div class="lightbox-info" id="lightboxInfo"></div>
-        </div>
-    </div>
+</main>
 
-    <div id="footer-container"></div>
+<div id="footer-container"></div> 
 
-    <script src="/js/main.js"></script>
-    <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/js/ui-easing.js"></script>
-    <script src="/js/plugins.js"></script>
-    <script src="/js/script.js"></script>
-    <script src="js/contest.js"></script>
+<!-- Scripts del sitio, no tocar -->
+<script src="/js/main.js"></script>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/ui-easing.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/projects.js"></script>
+
 </body>
 </html>
