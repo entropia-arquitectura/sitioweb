@@ -1018,14 +1018,19 @@ html {
     font-weight: 700;
     font-size: 0.95em;
     letter-spacing: 0.03em;
-    padding: 14px 32px;
+    padding: 12px 30px;
     border-radius: 3px;
+    border: 2px solid #C49A5A;
+    outline: 2px solid rgba(255,255,255,0.6);
+    outline-offset: 3px;
     text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease, outline-color 0.2s ease;
 }
 
 .btn-hero-cta:hover {
     background-color: #b08040;
+    border-color: #b08040;
+    outline-color: rgba(255,255,255,0.85);
     transform: translateY(-2px);
 }
 

@@ -14,6 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             document.getElementById("footer-container").innerHTML = data;
         });
+
+    // Botón flotante WhatsApp — visible en todas las páginas
+    const waBtn = document.createElement("a");
+    waBtn.href = "https://wa.me/5492212007443?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20un%20proyecto";
+    waBtn.className = "whatsapp-float";
+    waBtn.target = "_blank";
+    waBtn.rel = "noopener";
+    waBtn.setAttribute("aria-label", "Escribinos por WhatsApp");
+    waBtn.innerHTML = "💬 Escribinos";
+    document.body.appendChild(waBtn);
 });
 
 function setupHeaderScroll() {
