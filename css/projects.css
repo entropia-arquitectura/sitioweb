@@ -1,8 +1,8 @@
 /* Variables específicas para projects page */
 :root {
-  --projects-accent: #a98a64;
-  --projects-dark: #2f2f2f;
-  --projects-light-gray: #f8f8f8;
+  --projects-accent: #C49A5A;
+  --projects-dark: #1A1A1A;
+  --projects-light-gray: #F5F2EE;
   --projects-border: #e0e0e0;
   --projects-text: #555;
   --projects-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -14,7 +14,7 @@
 --------------------------------------------------------------*/
 .page-header {
   padding: 6rem 0 4rem;
-  background: linear-gradient(135deg, var(--projects-light-gray) 0%, #fff 100%);
+  background: linear-gradient(135deg, var(--projects-light-gray) 0%, #F5F2EE 100%);
   border-bottom: 1px solid var(--projects-border);
 }
 
@@ -46,7 +46,7 @@
 --------------------------------------------------------------*/
 .projects-section {
   padding: 4rem 0;
-  background: #fff;
+  background: #F5F2EE;
 }
 
 /*--------------------------------------------------------------
@@ -85,7 +85,7 @@
 .filter-btn.active {
   background: var(--projects-accent);
   border-color: var(--projects-accent);
-  color: #fff;
+  color: #F5F2EE;
   transform: translateY(-2px);
 }
 
@@ -114,7 +114,7 @@
 /** Project Cards
 --------------------------------------------------------------*/
 .project-card {
-  background: #fff;
+  background: #F5F2EE;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--projects-shadow);
@@ -169,8 +169,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(0,0,0,0.8) 0%, rgba(169,138,100,0.8) 100%);
-  color: #fff;
+  background: linear-gradient(45deg, rgba(0,0,0,0.8) 0%, rgba(196,154,90,0.8) 100%);
+  color: #F5F2EE;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -204,7 +204,7 @@
 }
 
 .project-title {
-  color: #fff;
+  color: #F5F2EE;
 }
 
 .project-location {
@@ -227,7 +227,7 @@
 --------------------------------------------------------------*/
 .project-info {
   padding: 1.5rem;
-  background: #fff;
+  background: #F5F2EE;
 }
 
 .project-meta {
@@ -277,7 +277,7 @@
 
 .load-more-btn {
   background: var(--projects-accent);
-  color: #fff;
+  color: #F5F2EE;
   border: 2px solid var(--projects-accent);
   padding: 1rem 2rem;
   font-size: 1rem;
@@ -301,7 +301,7 @@
 .projects-cta {
   padding: 4rem 0;
   background: linear-gradient(135deg, var(--projects-dark) 0%, #1a1a1a 100%);
-  color: #fff;
+  color: #F5F2EE;
 }
 
 .cta-content {
@@ -315,7 +315,7 @@
   font-weight: 300;
   margin-bottom: 1rem;
   line-height: 1.2;
-  color: #fff;
+  color: #F5F2EE;
 }
 
 .projects-cta p {
@@ -326,14 +326,14 @@
 }
 
 .btn-light {
-  background: #fff;
+  background: #F5F2EE;
   color: var(--projects-dark);
-  border: 2px solid #fff;
+  border: 2px solid #F5F2EE;
 }
 
 .btn-light:hover {
   background: transparent;
-  color: #fff;
+  color: #F5F2EE;
 }
 
 /*--------------------------------------------------------------  

@@ -3,7 +3,7 @@
     --header-height-scrolled: 70px;
     --logo-height: 110px;
     --logo-height-scrolled: 70px;
-    --accent-color: #a98a64;
+    --accent-color: #C49A5A;
 }
 
 * {
@@ -19,7 +19,7 @@
     top: 0;
     width: 100%;
     z-index: 100;
-    background: white;
+    background: #F5F2EE;
     box-shadow: none;
     border-bottom: 1px solid #eee;
     display: flex;
@@ -39,7 +39,7 @@
 }
 
 #header.scrolled {
-    background-color: #ffffff;
+    background-color: #F5F2EE;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -49,7 +49,7 @@
 
 /* Logo */
 .sidebar-logo {
-    background: black;
+    background: #1A1A1A;
     width: 110px;
     height: var(--logo-height);
     display: flex;
@@ -79,7 +79,7 @@
 /* Estilos base para enlaces del menú */
 .menu-list li a {
     text-decoration: none;
-    color: #111;
+    color: #1A1A1A;
     font-size: 1.2rem;
     position: relative;
     padding: 10px 0;
@@ -121,7 +121,7 @@
 .hamburger-line {
     width: 25px;
     height: 3px;
-    background: #333;
+    background: #1A1A1A;
     margin: 3px 0;
     transition: 0.3s;
     transform-origin: center;
@@ -148,7 +148,7 @@
     width: 80%;
     max-width: 300px;
     height: 100vh;
-    background: white;
+    background: #F5F2EE;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
     z-index: 99;
@@ -173,14 +173,14 @@
     display: block;
     padding: 15px 30px;
     text-decoration: none;
-    color: #333;
+    color: #1A1A1A;
     font-size: 1.1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .mobile-menu .menu-list li a:hover,
 .mobile-menu .menu-list li a.active {
-    background-color: #f5f5f5;
+    background-color: #F5F2EE;
     color: var(--accent-color);
 }
 

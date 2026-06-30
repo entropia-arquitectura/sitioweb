@@ -3,14 +3,14 @@
    ================================================================= */
 
 :root {
-  --project-accent: #a98a64;
-  --project-dark: #2f2f2f;
-  --project-light-gray: #f8f8f8;
+  --project-accent: #C49A5A;
+  --project-dark: #1A1A1A;
+  --project-light-gray: #F5F2EE;
   --project-border: #e0e0e0;
   --project-text: #555;
   --project-shadow: 0 4px 20px rgba(0,0,0,0.1);
   --text-light: #7f8c8d;
-  --bg-light: #f8f9fa;
+  --bg-light: #F5F2EE;
 }
 
 /* =================================================================
@@ -53,7 +53,7 @@ img {
 --------------------------------------------------------------*/
 .breadcrumb-section {
   padding: 1rem 0;
-  background: #fff;
+  background: #F5F2EE;
   border-bottom: 1px solid var(--project-border);
 }
 
@@ -135,7 +135,7 @@ img {
   margin-bottom: 1rem;
   line-height: 1.2;
   letter-spacing: 1px;
-  color: #fff;
+  color: #F5F2EE;
 }
 
 .project-meta {
@@ -162,7 +162,7 @@ img {
 --------------------------------------------------------------*/
 .project-content {
   padding: 4rem 0;
-  background: #fff;
+  background: #F5F2EE;
 }
 
 .content-layout {
@@ -263,7 +263,7 @@ img {
 .project-gallery {
   margin-bottom: 4rem;
   padding: 2rem;
-  background: #fff;
+  background: #F5F2EE;
   border: 1px solid var(--project-border);
   border-radius: 12px;
   box-shadow: 0 2px 15px rgba(0,0,0,0.06);
@@ -286,7 +286,7 @@ img {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, var(--project-accent), #8a6d47);
+  background: linear-gradient(90deg, var(--project-accent), #C49A5A);
   border-radius: 2px;
 }
 
@@ -298,7 +298,7 @@ img {
   padding: 1rem 0.5rem 2rem 0.5rem;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
-  scrollbar-color: var(--project-accent) #f1f1f1;
+  scrollbar-color: var(--project-accent) #F5F2EE;
   -webkit-overflow-scrolling: touch;
   width: 100%;
 }
@@ -309,13 +309,13 @@ img {
 }
 
 .scrollable-gallery::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #F5F2EE;
   border-radius: 4px;
   margin: 0 0.5rem;
 }
 
 .scrollable-gallery::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, var(--project-accent), #8a6d47);
+  background: linear-gradient(90deg, var(--project-accent), #C49A5A);
   border-radius: 4px;
   transition: background 0.3s ease;
 }
@@ -333,7 +333,7 @@ img {
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-  background: #fff;
+  background: #F5F2EE;
   scroll-snap-align: start;
 }
 
@@ -359,8 +359,8 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent, rgba(47, 47, 47, 0.9));
-  color: white;
+  background: linear-gradient(transparent, rgba(26,26,26,0.9));
+  color: #F5F2EE;
   padding: 2.5rem 1.2rem 1.2rem;
   font-size: 0.95rem;
   font-weight: 400;
@@ -420,7 +420,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, transparent 60%, rgba(169, 138, 100, 0.15));
+  background: linear-gradient(135deg, transparent 60%, rgba(196,154,90,0.15));
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
@@ -461,7 +461,7 @@ img {
 }
 
 .document-item:hover {
-  background: #fff;
+  background: #F5F2EE;
   border-color: var(--project-border);
   box-shadow: var(--project-shadow);
 }
@@ -480,7 +480,7 @@ img {
 
 .document-icon i {
   font-size: 1.5rem;
-  color: #fff;
+  color: #F5F2EE;
 }
 
 .document-info {
@@ -507,7 +507,7 @@ img {
 
 .document-download {
   background: var(--project-accent);
-  color: #fff;
+  color: #F5F2EE;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   text-decoration: none;
@@ -521,7 +521,7 @@ img {
 }
 
 .document-download:hover {
-  background: #8a6d47;
+  background: #C49A5A;
   transform: translateY(-2px);
 }
 
@@ -536,7 +536,7 @@ img {
 .project-info-card,
 .collaborators-card,
 .related-projects-card {
-  background: #fff;
+  background: #F5F2EE;
   border: 1px solid var(--project-border);
   border-radius: 8px;
   padding: 1.5rem;
@@ -565,7 +565,7 @@ img {
   display: flex;
   flex-direction: column;
   padding-bottom: 0.8rem;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #F5F2EE;
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
@@ -600,7 +600,7 @@ img {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 0.8rem;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #F5F2EE;
 }
 
 .info-item:last-child,
@@ -658,7 +658,7 @@ img {
 }
 
 .related-card {
-  background: #fff;
+  background: #F5F2EE;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--project-shadow);
@@ -704,7 +704,7 @@ img {
 --------------------------------------------------------------*/
 .project-navigation {
   padding: 4rem 0;
-  background: #fff;
+  background: #F5F2EE;
   margin-top: 2rem;
   border-top: 1px solid var(--project-border);
 }
@@ -723,7 +723,7 @@ img {
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-  background: #fff;
+  background: #F5F2EE;
   border: 1px solid var(--project-border);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
@@ -738,7 +738,7 @@ img {
 .nav-next:hover,
 .nav-back:hover {
   background: var(--project-accent);
-  color: #fff;
+  color: #F5F2EE;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -756,7 +756,7 @@ img {
 
 .nav-prev:hover .nav-arrow,
 .nav-next:hover .nav-arrow {
-  color: #fff;
+  color: #F5F2EE;
 }
 
 .nav-info {
@@ -775,7 +775,7 @@ img {
 
 .nav-prev:hover .nav-label,
 .nav-next:hover .nav-label {
-  color: #fff;
+  color: #F5F2EE;
 }
 
 .nav-title {
@@ -816,7 +816,7 @@ img {
 }
 
 #lightbox-caption {
-  color: white;
+  color: #F5F2EE;
   font-size: 1.1rem;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 0.8rem 1.2rem;
@@ -836,7 +836,7 @@ img {
   top: 3%;
   right: 3%;
   font-size: 1.7rem;
-  color: white;
+  color: #F5F2EE;
   background: rgba(255, 255, 255, 0.15);
   border: none;
   border-radius: 50%;
@@ -855,7 +855,7 @@ img {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
-  color: white;
+  color: #F5F2EE;
   background: rgba(0, 0, 0, 0.4);
   border: none;
   border-radius: 50%;

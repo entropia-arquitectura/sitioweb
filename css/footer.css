@@ -4,7 +4,7 @@ footer#footer {
   margin-top: 100px;
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: #f9f9f9;
+  background-color: #F5F2EE;
 }
 
 #footer .container {
@@ -39,7 +39,7 @@ footer#footer {
 .footer-menu h5 {
   font-size: 1.3em;
   font-weight: 600;
-  color: #222;
+  color: #1A1A1A;
   margin-bottom: 20px;
 }
 
@@ -125,7 +125,7 @@ footer#footer {
   border-top: 1px solid #ddd;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #f9f9f9;
+  background-color: #F5F2EE;
 }
 
 .footer-mobile-only {

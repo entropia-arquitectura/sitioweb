@@ -1,7 +1,7 @@
 .services-container {
   min-height: 100vh;
   padding: 3rem 1rem;
-  background: #fafafa;
+  background: #F5F2EE;
 }
 
 .services-hero {
@@ -15,7 +15,7 @@
 .services-hero h1 {
   font-size: 2.5rem;
   font-weight: 300;
-  color: #2c2c2c;
+  color: #1A1A1A;
   margin-bottom: 1rem;
   letter-spacing: 1px;
 }
@@ -49,12 +49,12 @@
 .group-title {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #c49c7e;
+  color: #C49A5A;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 0.75rem 1rem;
   margin-bottom: 0.5rem;
-  background: #f8f8f8;
+  background: #F5F2EE;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -65,13 +65,13 @@
 }
 
 .group-title:hover {
-  background: #f0f0f0;
-  color: #a17c5f;
+  background: #F5F2EE;
+  color: #C49A5A;
 }
 
 .group-title.active {
-  background: #c49c7e;
-  color: #fff;
+  background: #C49A5A;
+  color: #F5F2EE;
 }
 
 .toggle-icon {
@@ -96,7 +96,7 @@
 .service-categories .toggle {
   display: block;
   width: 100%;
-  background: #fff;
+  background: #F5F2EE;
   border: none;
   border-left: 3px solid #e0e0e0;
   font-weight: 400;
@@ -119,21 +119,21 @@
 }
 
 .service-categories .toggle:hover {
-  background: #f8f8f8;
-  border-left-color: #c49c7e;
+  background: #F5F2EE;
+  border-left-color: #C49A5A;
   transform: translateX(2px);
 }
 
 .service-categories .toggle.active {
-  background: #c49c7e;
-  color: #fff;
-  border-left-color: #a17c5f;
-  box-shadow: 0 2px 8px rgba(196, 156, 126, 0.3);
+  background: #C49A5A;
+  color: #F5F2EE;
+  border-left-color: #C49A5A;
+  box-shadow: 0 2px 8px rgba(196,154,90,0.3);
 }
 
 .service-content {
   flex: 1;
-  background: #fff;
+  background: #F5F2EE;
   border-radius: 8px;
   padding: 2.5rem;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -163,14 +163,14 @@
 .service-header h2 {
   font-size: 1.8rem;
   font-weight: 400;
-  color: #2c2c2c;
+  color: #1A1A1A;
   margin-bottom: 0.5rem;
   letter-spacing: 0.5px;
 }
 
 .service-header .subtitle {
   font-size: 1rem;
-  color: #c49c7e;
+  color: #C49A5A;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -193,7 +193,7 @@
 
 .service-features h3 {
   font-size: 1.2rem;
-  color: #2c2c2c;
+  color: #1A1A1A;
   margin-bottom: 1rem;
   font-weight: 500;
 }
@@ -215,7 +215,7 @@
   content: "—";
   position: absolute;
   left: 0;
-  color: #c49c7e;
+  color: #C49A5A;
   font-weight: bold;
 }
 
